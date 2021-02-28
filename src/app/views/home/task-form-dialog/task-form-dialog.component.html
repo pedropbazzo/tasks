@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Nova Tarefa</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="taskForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome da tarefa</mat-label>
+            <input matInput placeholder="" formControlName="taskName" name="taskName">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome do Canal</mat-label>
+            <input matInput placeholder="" formControlName="channelName" name="channelName">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Link Completo</mat-label>
+            <input matInput placeholder="" formControlName="taskLink" name="taskLink">
+        </mat-form-field>
+
+        <div fxLayout="row wrap">
+        <div fxFlex="50" fxFill fxLayoutAlign="start center">
+            <mat-form-field>
+                <mat-label>Data da Tarefa</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="taskDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50" fxFill fxLayoutAlign="start center">
+            <mat-form-field>
+                <mat-label>Horário da Tarefa</mat-label>
+                <input matInput type="time" placeholder="" formControlName="taskTime" #time/>
+            </mat-form-field>
+        </div>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="createTask()">Adicionar</button>
+</div>

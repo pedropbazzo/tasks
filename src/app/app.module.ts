@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components Criados
 import { HomeComponent } from './views/home/home.component';
-import { LiveListComponent } from './views/home/live-list/live-list.component';
+import { TaskListComponent } from './views/home/task-list/task-list.component';
 
 // Components do Angular Material
 import { MatButtonModule } from '@angular/material/button';
@@ -25,7 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [
     AppComponent,
     HomeComponent,
-    LiveListComponent
+    TaskListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { PipeTransform, Pipe } from '@angular/core';
-import * as moment from 'moment';
+import * as moment from 'src/app/views/home/task-form-dialog/node_modules/moment';
 
 @Pipe({
     name: 'localDateTimePipe'
